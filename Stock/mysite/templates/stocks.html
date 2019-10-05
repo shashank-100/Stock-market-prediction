@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h3>Stock Predictor</h3>
+ <div class="row justify-content-center">
+    <div class="col-8">
+      <div class="card">
+        <div class="card-body">
+            <h5>Select a company</h5>
+ <form method="POST" action="{% url 'results' %}" >
+            {% csrf_token %}
+      <select name="company" >
+           <option value="AMZN.csv">AMAZON</option>
+           <option value="Google.csv">GOOGLE</option>
+          <option value="MSFT.csv">MICROSOFT</option>
+          <option value="AUDI.csv">AUDI</option>
+          <option value="ORCL.csv">ORACLE</option>
+          <option value="SONY.csv">APPLE</option>
+          <option value="FB.csv">FACEBOOK</option>
+          <option value="HP.csv">HP</option>
+          <option value="INTEL.csv">INTEL</option>
+     </select>
+            <button type="submit" class="btn btn-primary">Enter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
