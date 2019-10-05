@@ -1,4 +1,5 @@
 STOCK MARKET PREDICTION
+
 First, clone the repository to your local machine:
 
 ```bash
